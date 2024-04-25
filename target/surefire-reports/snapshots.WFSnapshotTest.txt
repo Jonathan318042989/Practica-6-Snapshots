@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: snapshots.WFSnapshotTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.199 s <<< FAILURE! - in snapshots.WFSnapshotTest
+testUpdatesAndScans  Time elapsed: 0.188 s  <<< ERROR!
+java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
+	at snapshots.WFSnapshotTest.testUpdatesAndScans(WFSnapshotTest.java:33)
+

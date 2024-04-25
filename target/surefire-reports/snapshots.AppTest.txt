@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+Test set: snapshots.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in snapshots.AppTest
+testApp  Time elapsed: 0.026 s
