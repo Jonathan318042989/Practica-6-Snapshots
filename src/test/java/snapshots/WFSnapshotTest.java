@@ -23,15 +23,18 @@ public class WFSnapshotTest {
                 public void run(){
                     snapshot.update(aux+1);
                 }
-            });
+            }, ""+i);
         }
         for(Thread t : threads)
             t.start();
         for(Thread t : threads)
             t.join();
         
-        Integer[] result = snapshot.scan();
+        Object[] scan = snapshot.scan();
+        Integer[] result = new Integer[HILOS];
         for (int i = 0; i < HILOS; i++)
-            assertEquals(i + 1, (int) result[i]);
+            result[i] = (int) scan[i];
+        for (int i = 0; i < HILOS; i++)
+            assertEquals(i + 1, result[i]);
     }
 }
