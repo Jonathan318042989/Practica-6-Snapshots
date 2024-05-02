@@ -1,4 +1,6 @@
 package comandos;
+
+import comandos.constants.Constantes;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -7,13 +9,9 @@ public class Comandos {
 
     public Comandos() {
         comandoHelp = new HashMap<>();
-        comandoHelp.put("push", "Envía los cambios realizados en el repositorio local a un repositorio remoto. " +
-                                "Esto permite que otros colaboradores vean los cambios y mantengan " +
-                                "sincronizado el estado del repositorio compartido.");
-        comandoHelp.put("add", "Agrega cambios al área de preparación para ser incluidos en el próximo commit. " +
-                               "Antes de realizar un commit, los cambios deben ser añadidos al área de preparación " +
-                               "utilizando este comando.");
-        comandoHelp.put("help", "Muestra información de ayuda sobre los comandos disponibles.");
+        comandoHelp.put("push", Constantes.PUSH);
+        comandoHelp.put("add", Constantes.ADD);
+        comandoHelp.put("help", Constantes.HELP);
     }
 
     public void ejecutarComando(String comando) {
