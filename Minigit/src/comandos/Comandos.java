@@ -12,15 +12,23 @@ public class Comandos {
         comandoHelp.put("push", Constantes.PUSH);
         comandoHelp.put("add", Constantes.ADD);
         comandoHelp.put("help", Constantes.HELP);
+        comandoHelp.put("checkout", Constantes.CHECKOUT);
+        comandoHelp.put("diff", Constantes.DIFF);
     }
 
     public void ejecutarComando(String comando) {
-        switch(comando) {
+        switch (comando) {
             case "push":
                 System.out.println("Ejecutando 'git push'...");
                 break;
             case "add":
                 System.out.println("Ejecutando 'git add'...");
+                break;
+            case "checkout":
+                System.out.println("Ejecutando 'git checkout'...");
+                break;
+            case "diff":
+                System.out.println("Ejecutando 'git diff' ...");
                 break;
             case "help":
                 showHelp();
@@ -41,7 +49,7 @@ public class Comandos {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingrese sus comandos git (type 'exit' para salir):");
-        
+
         while (true) {
             System.out.print("git ");
             String input = scanner.nextLine().trim();
